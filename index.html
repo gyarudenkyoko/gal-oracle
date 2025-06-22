@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>💖 ギャル札オラクル 💸</title>
+<style>
+body {
+margin: 0;
+font-family: "Yu Gothic", sans-serif;
+text-align: center;
+color: #fff;
+background-image: url("img/bg.jpg");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 2em;
+backdrop-filter: brightness(1.1) saturate(1.2);
+}
+.oracle {
+font-size: 2em;
+background: rgba(255, 0, 150, 0.3);
+padding: 1em;
+border-radius: 16px;
+box-shadow: 0 4px 15px rgba(255,0,255,0.5);
+}
+.btn {
+font-size: 1em;
+padding: 1em 2em;
+background: #ff99cc;
+border: none;
+color: white;
+border-radius: 999px;
+cursor: pointer;
+margin-top: 2em;
+box-shadow: 0 4px 10px rgba(255,0,150,0.4);
+}
+</style>
+</head>
+<body>
+<div class="oracle" id="oracle">💫 今日のギャル運気、チャージ中…</div>
+<button class="btn" onclick="showOracle()">ギャル召喚✨</button>
+
+<script>
+const oracles = [
+"💅 今週、ATMより君の財布が輝いてる。",
+"💸 今日の無駄遣い、未来の投資。",
+"🤑 今の君、ATMより頼れるって噂だよ〜",
+"🎰 スクラッチでもガチャでも、当たるのは君の手から✨",
+"👛 財布から出る札＝流れる“運”ってことよネ✋",
+"🎇 やっべ…この札、今日ブチ当たりDAYかも",
+"🧃 金は使うためにあるって神も言ってた（多分）",
+"✨ 君が使うなら1円札でも億超え価値なるんよ",
+"🪩 通帳よりこの札のが信頼できる〜",
+"💅 推しのグッズ？迷ってる時間が損失✋",
+"👑 今日のお金、全部君のために輝いてるから！",
+"💸 財布にこの札あるとか、まじ運命が味方してる♡",
+"💋 君が触った時点で、それもうプレミア札ね✋",
+"💅 この札に選ばれたの、ガチで君だけ。",
+"🦄 君の財布、今キラキラ音してるよ✨",
+"🌟 他人の価値観？ごめん、君の方が信用できる〜",
+"💕 え、こんな可愛い札持ってるのやばくない？モテ確。",
+"🧚‍♀️ これ見たってことは、今日は推しに会える確率70%増し💖",
+"💰 今日の金運：爆アガ。使った分だけモテるよ？",
+"💎 財布から飛び出すこの札、ガチ恋レベルで運上げてくる",
+"🪙 金は天下の回りものって言うけど、今中心にいるの君です",
+"🤑 今の君、ATMより頼れるって噂だよ〜",
+"🎰 スクラッチでもガチャでも、当たるのは君の手から✨",
+"📈 支払いのたびに、株も評価も上がってるよ〜↑↑",
+"🧃 タピ2杯分の出費で運命変えられるなら安くない？",
+"💡 レジで一番キマってるの、間違いなく君だよ",
+"✨ 今日の札、バイブス爆イケって感じ",
+"💅 自分磨き費？それ、札が自分から飛んでくるやつ💞",
+"💄 財布の中で一番ラメってる札、それ、運気のやつです",
+"🎀 散財じゃなくて散LOVEってこと♡",
+"🌸 値札？見ないでレジ行く姿、推せる✨",
+"📦 ポチって後悔しても、運は積んでるからだいじょぶ✋",
+"🍭 お金の使い方、君はもう“信仰”の域だよね笑",
+"💘 推しと目が合ったの、それ札ががんばったおかげかもよ",
+"💍 今日のこの札、将来の結婚資金にならないって保証する♡",
+"🫶 君が持ってるだけで、他の人も金運上がってく",
+"👠 誰に使うか迷ってる？だいじょぶ、札は知ってるから",
+"💌 札も恋も、“早めに動いたもん勝ち”よ💋",
+"💖 財布の中身が未来の彼氏のタイプかも⁉️",
+"🦋 通帳の数字より、今の私の気分が価値〜",
+"🔥 札は“回す力”ある人のとこに来るんだよね〜",
+"😤 もったいないと思った時点で負け、うちら迷わんし✋",
+"🧨 借金？それ“未来の信頼”って意味だから♡",
+"🐆 節約しすぎて可愛くなくなったら意味なくない？",
+"🐾 財布の主が可愛いと札も逃げないって統計出てる♡",
+"🌙 今日使った1,000円、宇宙が10,000円にして返すって",
+"🧘‍♀️ 財布の中に余白つくった？入ってくるサインね💡",
+"🌌 札に「ありがとう」って言うと運命バグるらしいよ",
+"🎇 財布の中で一番光ってる札＝いま使えって合図🔥",
+"🪬 このQR見つけた瞬間、もう一個人生のランク上がった♡"
+];
+function showOracle() {
+const rand = Math.floor(Math.random() * oracles.length);
+document.getElementById("oracle").textContent = oracles[rand];
+}
+window.onload = showOracle;
+</script>
+</body>
+</html>
